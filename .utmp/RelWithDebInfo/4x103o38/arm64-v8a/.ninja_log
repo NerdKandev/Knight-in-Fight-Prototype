@@ -1,0 +1,12 @@
+# ninja log v5
+10	388	1765690530838222814	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	9e96ed59e9a17cd8
+389	632	1765690531069280132	/Users/macpro/Desktop/Workspace/Unity/Knight in Fight/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4x103o38/obj/arm64-v8a/libswappywrapper.so	193061e5cbcb55cf
+2	2552	1765690532992452234	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e38224e3bd7c3c35
+6	2562	1765690533002258835	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d12add4f1ab82c0a
+1	2650	1765690533091943602	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c42ea1c4914969ff
+7	2673	1765690533113461868	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	41ecbb370eb0d5bd
+2	2796	1765690533240526654	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f439490ae265a097
+9	2927	1765690533371074730	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	e7d273c42070c633
+4	3246	1765690533691350637	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	b6ad5becc84f9e4e
+0	3495	1765690533936935850	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	867fc61151f4d5d6
+3495	3680	1765690534133971024	/Users/macpro/Desktop/Workspace/Unity/Knight in Fight/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4x103o38/obj/arm64-v8a/libgame.so	663d5f00c88e6f20
