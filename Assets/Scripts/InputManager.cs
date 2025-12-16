@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-public class SwipeManager : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
-    public static SwipeManager Instance { get; private set; }
+    public static InputManager Instance { get; private set; }
 
     [Header("Swipe Settings")]
     [SerializeField] private float _minSwipeDistance; //Độ dài tối thiểu khi Swipe
@@ -13,6 +13,8 @@ public class SwipeManager : MonoBehaviour
 
     public bool SwipeUp { get; private set; }
     public bool SwipeDown { get; private set; }
+
+    public bool Tap { get; private set; }
 
     private void Awake()
     {
@@ -53,11 +55,11 @@ public class SwipeManager : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
             _endTouchPosistion = Input.mousePosition;
-            DetectSwipe();
+            DetectGesture();
         }
     }
 
-    //Xử lý vuốt trên mobile
+    //Xử lý chạm ngón tay trên màn hình điện thoại
     private void HandleTouchInput()
     {
         if (Input.touchCount == 0) return;
@@ -71,17 +73,21 @@ public class SwipeManager : MonoBehaviour
         else if (touch.phase == TouchPhase.Ended)
         {
             _endTouchPosistion = touch.position;
-            DetectSwipe();
+            DetectGesture();
         }
 
     }
 
-    //Kiểm tra xem người chơi có vuốt không?
-    private void DetectSwipe()
+    //Phát hiện cử chỉ của người chơi
+    private void DetectGesture()
     {
         float verticalDistance = _endTouchPosistion.y - _startTouchPosition.y;
 
-        if (Mathf.Abs(verticalDistance) < _minSwipeDistance) return;
+        if (Mathf.Abs(verticalDistance) < _minSwipeDistance)
+        {
+            Tap = true;
+            return;
+        }
 
         if (verticalDistance > 0)
         {
@@ -93,9 +99,9 @@ public class SwipeManager : MonoBehaviour
         }
     }
 
-
     private void ResetSwipeFlags()
     {
+        Tap = false;
         SwipeUp = false;
         SwipeDown = false;
     }
